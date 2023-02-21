@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang = "en" xmlns:th = "https://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Add User</title>
+</head>
+<body>
+<h1>Add User</h1>
+<form method = "post">
+    <label>Username<input type="text" id="username" name="username" th:value="${username}"></label><br>
+    <label>Email<input type="email" id="email" name="email" th:value="${email}"></label><br>
+    <label>Password<input type="password" id="password" name="password"></label><br>
+    <label>Verify Password<input type="password" id="verifyPassword" name="verifyPassword"></label><br>
+    <p th:if="${error}" th:text:="${error}"></p>
+
+<!--    <label for="email">Email:</label>-->
+<!--    <input type="email" id="email" name="email"><br>-->
+
+<!--    <label for="password">Password:</label>-->
+<!--    <input type="password" id="password" name="password"><br>-->
+
+<!--    <label for="verifyPassword">Verify Password:</label>-->
+<!--    <input type="password" id="verifyPassword" name="verifyPassword"><br>-->
+
+    <input type="submit" value="Add User">
+
+</form>
+</body>
+
+</html>
